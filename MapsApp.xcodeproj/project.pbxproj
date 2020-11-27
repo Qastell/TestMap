@@ -232,7 +232,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F59A455255FDB260099D3E5 /* Build configuration list for PBXNativeTarget "MapsApp" */;
 			buildPhases = (
-				3F7C18792562AC9100B778FC /* SwiftLint */,
 				4B67EABE5E402A9999A7D52D /* [CP] Check Pods Manifest.lock */,
 				3F7C18402562A4C100B778FC /* R.Swift */,
 				3F59A427255FDB210099D3E5 /* Sources */,
@@ -402,24 +401,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/MapsApp/Resources/R.generated.swift\"\n";
-		};
-		3F7C18792562AC9100B778FC /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		4B67EABE5E402A9999A7D52D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
