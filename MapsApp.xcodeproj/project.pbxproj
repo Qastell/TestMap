@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		3F59A446255FDB260099D3E5 /* MapsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A445255FDB260099D3E5 /* MapsAppTests.swift */; };
 		3F59A451255FDB260099D3E5 /* MapsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A450255FDB260099D3E5 /* MapsAppUITests.swift */; };
 		3F7C182F2562861600B778FC /* GMSMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C182E2562861600B778FC /* GMSMapView+Extension.swift */; };
+		3F7C18432562A5E700B778FC /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F7C18422562A5E700B778FC /* Rswift */; };
+		3F7C186C2562AA1900B778FC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C186B2562AA1900B778FC /* R.generated.swift */; };
 		3F840F03255FDDA600F0557B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F840F02255FDDA600F0557B /* MapViewController.swift */; };
 		3FF744C425601B6300F8B7B1 /* MapClusterIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF744C325601B6300F8B7B1 /* MapClusterIconGenerator.swift */; };
 		3FF744CC25611C1F00F8B7B1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF744CB25611C1F00F8B7B1 /* UIView+Extension.swift */; };
@@ -56,6 +58,7 @@
 		3F59A450255FDB260099D3E5 /* MapsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAppUITests.swift; sourceTree = "<group>"; };
 		3F59A452255FDB260099D3E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7C182E2562861600B778FC /* GMSMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSMapView+Extension.swift"; sourceTree = "<group>"; };
+		3F7C186B2562AA1900B778FC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		3F840F02255FDDA600F0557B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3FF744C325601B6300F8B7B1 /* MapClusterIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapClusterIconGenerator.swift; sourceTree = "<group>"; };
 		3FF744CB25611C1F00F8B7B1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7E7A327C0A0AB5A24A6C51 /* Pods_MapsApp.framework in Frameworks */,
+				3F7C18432562A5E700B778FC /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,7 @@
 		3F59A42D255FDB210099D3E5 /* MapsApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C186A2562AA1900B778FC /* Resources */,
 				3F59A42E255FDB210099D3E5 /* AppDelegate.swift */,
 				3FF744F125613E7900F8B7B1 /* ViewControllers */,
 				3FF744F025613E6700F8B7B1 /* CustomClasses */,
@@ -166,6 +171,14 @@
 				3F59A452255FDB260099D3E5 /* Info.plist */,
 			);
 			path = MapsAppUITests;
+			sourceTree = "<group>";
+		};
+		3F7C186A2562AA1900B778FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C186B2562AA1900B778FC /* R.generated.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3FF744EE25613E4D00F8B7B1 /* Extensions */ = {
@@ -219,7 +232,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F59A455255FDB260099D3E5 /* Build configuration list for PBXNativeTarget "MapsApp" */;
 			buildPhases = (
+				3F7C18792562AC9100B778FC /* SwiftLint */,
 				4B67EABE5E402A9999A7D52D /* [CP] Check Pods Manifest.lock */,
+				3F7C18402562A4C100B778FC /* R.Swift */,
 				3F59A427255FDB210099D3E5 /* Sources */,
 				3F59A428255FDB210099D3E5 /* Frameworks */,
 				3F59A429255FDB210099D3E5 /* Resources */,
@@ -231,6 +246,9 @@
 			dependencies = (
 			);
 			name = MapsApp;
+			packageProductDependencies = (
+				3F7C18422562A5E700B778FC /* Rswift */,
+			);
 			productName = MapsApp;
 			productReference = 3F59A42B255FDB210099D3E5 /* MapsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -306,6 +324,9 @@
 				Base,
 			);
 			mainGroup = 3F59A422255FDB210099D3E5;
+			packageReferences = (
+				3F7C18412562A5E700B778FC /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = 3F59A42C255FDB210099D3E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +382,44 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsApp-MapsAppUITests/Pods-MapsApp-MapsAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3F7C18402562A4C100B778FC /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/MapsApp/Resources/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/MapsApp/Resources/R.generated.swift\"\n";
+		};
+		3F7C18792562AC9100B778FC /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		4B67EABE5E402A9999A7D52D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -489,6 +548,7 @@
 				3FF744DC25611F9800F8B7B1 /* Multidelegat.swift in Sources */,
 				3F840F03255FDDA600F0557B /* MapViewController.swift in Sources */,
 				3F7C182F2562861600B778FC /* GMSMapView+Extension.swift in Sources */,
+				3F7C186C2562AA1900B778FC /* R.generated.swift in Sources */,
 				3FF744C425601B6300F8B7B1 /* MapClusterIconGenerator.swift in Sources */,
 				3FF744D425611CE400F8B7B1 /* CustomMarker.swift in Sources */,
 				3FF744CC25611C1F00F8B7B1 /* UIView+Extension.swift in Sources */,
@@ -831,6 +891,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F7C18412562A5E700B778FC /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F7C18422562A5E700B778FC /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F7C18412562A5E700B778FC /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F59A423255FDB210099D3E5 /* Project object */;
 }

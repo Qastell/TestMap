@@ -188,10 +188,6 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         
-//        let marker = GMSMarker(position: location.coordinate)
-//        marker.title = "You are here"
-//        marker.map = mapView
-        
         mapView?.camera = GMSCameraPosition(
             target: location.coordinate,
             zoom: 15,

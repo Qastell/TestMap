@@ -89,7 +89,7 @@ extension CustomMarker: MapViewDelegate {
     
     func drawBigTable(salary: Int, vacancy: Int) -> UIView {
         let markerView = UIView(frame: CGRect(x: 0, y: 0, width: 110, height: 40))
-        let imageView = UIImageView(image: UIImage(named: "bigTable")!)
+        let imageView = UIImageView(image: R.image.bigTable())
         imageView.frame = markerView.frame
         imageView.contentMode = .scaleAspectFit
         imageView.center = markerView.center
@@ -112,7 +112,7 @@ extension CustomMarker: MapViewDelegate {
     
     func drawTable(salary: Int) -> UIView {
         let markerView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 40))
-        let imageView = UIImageView(image: UIImage(named: "table")!)
+        let imageView = UIImageView(image: R.image.table())
         imageView.frame = markerView.frame
         imageView.contentMode = .scaleAspectFit
         imageView.center = markerView.center
@@ -135,7 +135,7 @@ extension CustomMarker: MapViewDelegate {
     
     func drawPinWithNumber(_ numberOfVacancy: Int)->UIView {
         let markerView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
-        let imageView = UIImageView(image: UIImage(named: "pinWithNumber")!)
+        let imageView = UIImageView(image: R.image.pinWithNumber())
         imageView.frame = markerView.frame
         imageView.contentMode = .scaleAspectFit
         imageView.center = markerView.center
@@ -157,7 +157,7 @@ extension CustomMarker: MapViewDelegate {
     }
     
     func drawPin() -> UIView {
-        let pinView = UIImageView(image: UIImage(named: "pin"))
+        let pinView = UIImageView(image: R.image.pin())
         pinView.frame = CGRect(x: 0, y: 0, width: 30, height: 40)
         pinView.contentMode = .scaleAspectFit
         return pinView
